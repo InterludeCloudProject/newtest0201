@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Board</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        async function submitQuestion() {
+            const question = document.getElementById('question').value;
+            if (!question.trim()) {
+                alert('Please enter a question.');
+                return;
+            }
+
+            const response = await fetch('QnAServlet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `question=${encodeURIComponent(question)}`,
+            });
+
+            const result = await response.text();
+            alert(result);
+            document.getElementById('question').value = '';
+            loadQuestions();
+        }
+
+        async function loadQuestions() {
+            const response = await fetch('QnAServlet');
+            const questions = await response.json();
+
+            const questionList = document.getElementById('questionList');
+            questionList.innerHTML = '';
+
+            questions.forEach(q => {
+                const questionItem = document.createElement('div');
+                questionItem.classList.add('question-item');
+                questionItem.innerHTML = `
+                    <p><strong>Q:</strong> ${q.question}</p>
+                    <p><strong>A:</strong> ${q.answer || 'Not answered yet'}</p>
+                    <p><small>Asked on: ${new Date(q.created_at).toLocaleString()}</small></p>
+                `;
+                questionList.appendChild(questionItem);
+            });
+        }
+
+        window.onload = loadQuestions;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Q&A Board</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Ask a Question</h2>
+            <textarea id="question" placeholder="Enter your question here..."></textarea>
+            <button onclick="submitQuestion()">Submit</button>
+        </section>
+        <section>
+            <h2>Questions & Answers</h2>
+            <div id="questionList"></div>
+        </section>
+    </main>
+</body>
+</html>
