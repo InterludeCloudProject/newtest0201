@@ -48,8 +48,62 @@
 
         window.onload = loadQuestions;
     </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(5,9,36);
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        nav {
+            background-color: rgba(5,9,36);
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a {
+            color: rgb(128, 129, 155);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 550;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: rgb(255, 255, 255)
+        }
+        .banner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(128, 129, 155);
+            margin: 0px -5px;
+            font-weight: 430;
+        }
+        .banner p{
+            margin-top: 15px;
+            margin-bottom: 9px;
+            font-size: 1.25em;
+        }
+	</style>
 </head>
 <body>
+	<!-- 배너 관련 코드 -->
+    <nav>
+        <div class="banner">
+            <img alt="" src="./baner.png" width="42px" height="42px">
+            <p>&nbsp;INTERLUDE</p>
+        </div>
+        <div class="banner">
+            <a href="index.html">홈</a>
+            <a href="study.html">해킹스터디</a>
+            <a href="seminar.html">세미나 활동</a>
+            <a href="photos.html">활동 사진</a>
+            <a href="qna.html">질문게시판</a>
+        </div>
+    </nav>
     <header>
         <h1>Q&A Board</h1>
     </header>
