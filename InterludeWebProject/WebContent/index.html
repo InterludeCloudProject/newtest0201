@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://c.pxhere.com/photos/1a/9d/stars_background_blue_photoshop_color_space_sky_dark-610854.jpg!d');
+            background-color: black;
             background-size: cover;
             background-position: center;
             color: white;
@@ -57,6 +57,7 @@
         .additional-info.visible {
             display: block;
         }
+        
     </style>
 </head>
 <body>
@@ -67,6 +68,7 @@
             <a href="study.html">스터디 과정</a>
             <a href="seminar.html">세미나 활동</a>
             <a href="photos.html">활동 사진</a>
+            <a href="qna.html">질문게시판</a>
         </div>
     </nav>
     <div class="container">
@@ -84,35 +86,33 @@
     </div>
 
     <!-- 민송이 여기부터 추가하면 됩니다! FAQ전까지 -->
-    <div class="additional-info" id="additional-info">
-        <h2>주요 활동</h2>
-           <h3>해킹 방어 대회(CTF)참여</h3>
-           <ul>
-              <li>매달 3개 이상의 CTF 참여 및 라이트업 작성 (시험기간 제외)</li>
-              <li>신입회원은 2개 이상 작성</li>
-              <li>본 스터디 시간 이외에 자율적으로 참여</li>
-           </ul>          
-           <h3>해킹 스터디 진행</h3>
-           <ul>
-              <li>매주 해킹 스터디 참여 (웹/리버싱/시스템 중 택1)</li>
-              <li>기본지식과 워게임을 통해 진행후 라이트업 작성</li>
-           </ul>
-           <h3>미니세미나&최종보고회</h3>
-           <p>학회원 간 정보보호 최신 동향 및 스터디 내용, CTF 문제 풀이 등을 공유</p>
-        <h2>INTERLUDE 특징</h2>
-        <p>
-        Hspace 협약: 공간 사용 및 특강과 행사 참여<br>
-        방학 중 프로젝트/스터디 진행: 각 회원들의 관심있는 주제 별 팀빌딩 후 팀 프로젝트로 스터디 진행<br>
-        홈 커밍 데이: 선배님과의 만남
-        </p>
-        <h2>모집대상</h2>
-        <ul>
-           <li>전공: 정보보호학과(부/복수전공 무관) 또는 지능정보보호학부</li>
-           <li>학년: 1학년 1학기 ~ 3학년 2학기</li>
-           <li>실력: 실력 무관 (기본적인 프로그래밍 언어지식 필요)</li>
-           <li>역량: 열정! 노력! 성실!만 있다면 누구든지 지원 가능</li>
-        </ul>      
-    </div>
+<div class="additional-info" id="additional-info">
+    <h2>주요 활동</h2>
+	<br>
+    <h2>해킹 방어 대회(CTF)참여</h2>
+    <p>매달 3개 이상의 CTF 참여 및 라이트업 작성 (시험기간 제외)</p>
+    <p>신입회원은 2개 이상 작성</p>
+    <p>본 스터디 시간 이외에 자율적으로 참여</p>
+	<br>
+    <h2>해킹 스터디 진행</h2>
+    <p>매주 해킹 스터디 참여 (웹/리버싱/시스템 중 택1)</p>
+    <p>기본지식과 워게임을 통해 진행 후 라이트업 작성</p>
+	<br>
+    <h2>미니세미나&최종보고회</h2>
+    <p>학회원 간 정보보호 최신 동향 및 스터디 내용, CTF 문제 풀이 등을 공유</p>
+	<br>
+    <h2>INTERLUDE 특징</h2>
+    <p>Hspace 협약: 공간 사용 및 특강과 행사 참여</p>
+    <p>방학 중 프로젝트/스터디 진행: 각 회원들의 관심 있는 주제별 팀빌딩 후 팀 프로젝트로 스터디 진행</p>
+    <p>홈 커밍 데이: 선배님과의 만남</p>
+	<br>
+    <h2>모집대상</h2>
+    <p><strong>전공:</strong> 정보보호학과(부/복수전공 무관) 또는 지능정보보호학부</p>
+    <p><strong>학년:</strong> 1학년 1학기 ~ 3학년 2학기</p>
+    <p><strong>실력:</strong> 실력 무관 (기본적인 프로그래밍 언어 지식 필요)</p>
+    <p><strong>역량:</strong> 열정! 노력! 성실!만 있다면 누구든지 지원 가능</p>
+</div>
+
 
     <script>
         // 스크롤 이벤트에 따라 배경 색상과 추가 정보를 표시
@@ -121,7 +121,6 @@
             const additionalInfo = document.getElementById('additional-info');
 
             if (scrollPosition > 300) { // 스크롤이 300px 이상일 때
-                document.body.style.backgroundColor = 'white'; // 배경 색상 변경
                 additionalInfo.classList.add('visible'); // 추가 정보 표시
             } else {
                 document.body.style.backgroundColor = ''; // 배경 색상 원래대로
