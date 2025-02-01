@@ -49,22 +49,22 @@
         }
         .container h1 {
             font-size: 2.5em;
-            padding-top: 10px;
+            padding-top: 20px;
         }
         .container p {
             font-size: 1.2em;
             margin-top: -10px;
+            line-height: 30px;
         }
-        
         .study-details {
             background-color: rgb(216, 216, 216);
             padding-top: 1px;
-            padding-bottom: 30px;
+            padding-bottom: 50px;
             padding-left: 30px;
             padding-right: 30px;
             margin-top: 45px;
             border-radius: 10px;
-            width: 55%;
+            width: 85%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -82,10 +82,9 @@
         .study-types {
             margin-top: 50px;
         }
-        .study-types h2 {
-            font-size: 1.5em;
+        .study-types h1 {
             color: rgba(5, 9, 36);
-            text-align: center;
+            text-align: left;
         }
         .study-types div {
             margin-top: 20px;
@@ -97,6 +96,29 @@
         }
         .study-types a:hover {
             color: rgb(128, 129, 155);
+        }
+        .box1 {
+          	float:left; 
+          	width:65%; 
+          	height:100px;
+          	font-size: 1.2em;
+          	text-align: left;
+        } 
+     	.box2 {
+          	display:inline-block; 
+          	width:23%; 
+          	height:100px;
+          	font-size: 1.2em;
+          	margin-left:10px;
+        }
+        .web {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -127,44 +149,43 @@
         
         <!-- 회색 박스 안 -->
         <div class="study-details">
-            <h2>활동 소개</h2>
-            <p>
-            1. 한 학기마다 웹/리버싱/시스템 중 한가지 분야를 선택하여 스터디를 진행합니다.<br>
-            2. 해킹 및 워게임에 대해 잘 모르는 초보자도 가능한 난이도로 구성되어있습니다.<br>
-            3. 스터디에 적극적으로 참여하도록 하기 위해 스터디 후 과제를 부여합니다. 또한 스터디를 진행하면서 여러 규칙과 벌금을 통해 적당한 강제성을 부여하도록 하고있습니다.</p><br><br>
+        	<div class="box1">
+        		<h2>활동 소개</h2>
+            	<p>
+            	 한 학기마다 웹/리버싱/시스템 중 한가지 분야를 선택하여 스터디를 진행합니다.<br>
+            	해킹 및 워게임에 대해 잘 모르는 초보자도 가능한 난이도로 구성되어있습니다.<br><br>
+            	스터디에 적극적으로 참여하도록 하기 위해 스터디 후 과제를 부여합니다.<br>
+            	또한 스터디를 진행하면서 여러 규칙과 벌금을 통해 적당한 강제성을 부여하도록 하고있습니다.</p><br>
+            	<p>*모든 스터디는 대면으로 진행됩니다.(시험기간 제외)*</p><br><br>
+        	</div>
+        	
+        	<div class="box2">
+        		<h2>스터디 일정</h2><br>
+            	<p>요일: 매주 화요일, 목요일</p>
+            	<p>장소: 제2과학관 303호</p>
+            	<p>시간: 18:00-19:30</p><br><br><br>
+        	</div>
             
-            <h2>스터디 종류</h2>
-            <p align="center">
-                <a href="#web-hacking">웹해킹(Web Hacking)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#reversing">리버싱(Reversing Engineering)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#system-hacking">시스템 해킹(System Hacking)</a>
-            </p><br><br>
-            
-            <h2>스터디 일정</h2>
-            <p>요일: 매주 화요일, 목요일</p>
-            <p>장소: 제2과학관 303호</p>
-            <p>시간: 18:00-19:30</p>
-            <p align="center">*모든 스터디는 대면으로 진행됩니다.(시험기간 제외)*</p><br><br>
         </div>
 
         <!-- 세부 내용 -->
         <div class="study-types">
-            <div id="web-hacking">
-                <h2>웹해킹(Web Hacking)</h2>
+            <div class="web"><br><br><br><br><br><br><br><br>
+                <h1>웹해킹(Web Hacking)</h1>
                 <p>웹해킹은 웹 애플리케이션의 취약점을 분석하고 공격 방법을 학습하는 과정입니다.<br>
                 초보자도 쉽게 따라할 수 있는 실습형 강의를 통해 실력을 쌓을 수 있습니다.<br>
                 드림핵을 이용하여 개념부터 워게임 실습, 퀴즈로 개념 확인까지 차근차근 웹해킹에 대해서 배울 수 있습니다.<br>
                 주요 학습 내용: SQL Injection, XSS, CSRF 등</p><br><br><br><br>
             </div>
-            <div id="reversing">
-                <h2>리버싱(Reversing Engineering)</h2>
+            <div class="web"><br><br><br><br><br><br><br><br>
+                <h1>리버싱(Reversing Engineering)</h1>
                 <p>리버싱 스터디는 프로그램의 내부 동작을 분석하고, 이를 기반으로 취약점을 발견하는 방법을 다룹니다.<br>
                 실제 바이너리 파일을 분석하며 디버깅 및 도구 활용 능력을 기릅니다.<br>
                 드림핵을 이용해 개념을 공부하고 실습으로는 코드엔진을 이용합니다. 주로 실습을 통해서 개념을 공부하고, 툴 사용법을 익힙니다,<br>
                 주요 학습 내용: 어셈블리 언어, 디버거 사용법, 악성코드 분석</p><br><br><br><br>
             </div>
-            <div id="system-hacking">
-                <h2>시스템 해킹(System Hacking)</h2>
+            <div class="web"><br><br><br><br><br><br><br><br>
+                <h1>시스템 해킹(System Hacking)</h1>
                 <p>시스템 해킹은 운영체제의 동작 원리를 이해하고 이를 악용하는 방법을 연구합니다.<br>
                 심화된 개념과 실제 사례를 다루며, 보안 시스템 우회 기법을 학습합니다.<br>
                 주요 학습 내용: Buffer Overflow, Format String Attack, Kernel Exploit</p><br><br>
