@@ -9,15 +9,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://media.istockphoto.com/id/1329927535/ko/%EC%82%AC%EC%A7%84/%ED%9D%B0%EC%83%89-%EA%B5%AC%EA%B2%A7%EC%A7%84-%EC%A2%85%EC%9D%B4-%ED%85%8D%EC%8A%A4%EC%B2%98-%EB%B0%B0%EA%B2%BD.jpg?s=612x612&w=0&k=20&c=v0-eTsxxrqK7XRuVRaLlnQhNCrxbXIZx2uMJqMpsQEw=');
+		    background-color: rgba(5,9,36);   
             background-size: cover;
             background-position: center;
-            color: black;
-            text-align: center;
+            color: white;
+
         }
         nav {
-            background-color: rgba(11, 18, 48, 0.7);
-            padding: 10px 20px;
+            background-color: rgba(5,9,36);
+            padding: 0px 20px;
             display: flex;
             justify-content: space-between;
         }
@@ -29,10 +29,24 @@
         }
         nav a:hover {
             text-decoration: underline;
-            color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255)
+        }
+        .banner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(128, 129, 155);
+            margin: 0px -5px;
+            font-weight: 430;
+        }
+        .banner p{
+            margin-top: 15px;
+            margin-bottom: 9px;
+            font-size: 1.25em;
         }
         .container {
-            padding: 50px;
+            padding: 40px;
+             text-align: center;
         }
         .container h1 {
             font-size: 2.5em;
@@ -44,16 +58,17 @@
             grid-template-columns: repeat(3, 1fr); /* ✅ 한 줄에 3개씩 표시 */
             gap: 40px;
             justify-items: center;
-            padding: 20px;
+            padding: 10px;
         }
         .gallery-item {
             position: relative;
             overflow: hidden;
-            background-color: black;
+            background-image: url('https://media.istockphoto.com/id/1329927535/ko/%EC%82%AC%EC%A7%84/%ED%9D%B0%EC%83%89-%EA%B5%AC%EA%B2%A8%EC%A7%84-%EC%A2%85%EC%9D%B4-%ED%85%8D%EC%8A%A4%EC%B2%98-%EB%B0%B0%EA%B2%BD.jpg?s=612x612&w=0&k=20&c=v0-eTsxxrqK7XRuVRaLlnQhNCrxbXIZx2uMJqMpsQEw=');
             border-radius: 10px;
             box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease-in-out;
             padding: 10px;
+            height: 470px;
             width: 100%;
         }
         .gallery-item:hover {
@@ -61,22 +76,24 @@
         }
         .gallery img {
             width: 100%;
-            height: auto;
+            height: 70%;
             border-radius: 10px;
             display: block;
         }
         .description {
-            margin-top: 10px;
-            font-size: 1.1em;
+            margin-top: 20px;
+            font-size: 1.15em;
             font-weight: 600;
-            color: white;
+            color: black;
+            
         }
     </style>
 </head>
 <body>
-    <!-- 배너 -->
+    <!-- 배너 관련 코드 -->
     <nav>
         <div class="banner">
+            <img alt="" src="./baner.png" width="42px" height="42px">
             <p>&nbsp;INTERLUDE</p>
         </div>
         <div class="banner">
@@ -90,25 +107,24 @@
 
     <div class="container">
         <h1>활동 사진</h1>
-        <p>INTERLUDE의 주요 활동 모음</p>
+        <h2>INTERLUDE의 주요 활동 모습을 담았습니다!</h2>
 
         <!-- 🎯 스크롤 가능한 사진 갤러리 -->
         <div id="gallery" class="gallery"></div>
     </div>
 
     <script>
-        // 🎯 사진 데이터 배열 (사진 10개)
+        // 🎯 사진 데이터 배열 (사진 9개)
         const photos = [
-            { src: "photos_1.png", description: "📌 매달 꾸준히 CTF 대회 참가!" },
-            { src: "photos_2.png", description: "📌 웹/시스템/리버싱 스터디 진행!" },
+            { src: "photos_1.png", description: "📌 매달 꾸준히 CTF 대회 참가" },
+            { src: "photos_2.png", description: "📌 웹/시스템/리버싱 스터디 진행" },
             { src: "photos_3.jpg", description: "📌 연합 세미나" },
-            { src: "photos_3.jpg", description: "📌 방학 중 진행되는 팀 프로젝트" },
-            { src: "photos_3.jpg", description: "📌 선배와의 만남" },
-            { src: "photos_3.jpg", description: "📌 미니 세미나" },
-            { src: "photos_3.jpg", description: "📌 MT" },
-            { src: "photos_3.jpg", description: "📌 최신 보안 동향 파악" },
-            { src: "photos_3.jpg", description: "📌 프로젝트 발표" },
-            { src: "photos_3.jpg", description: "📌 보안 커뮤니티 참여" }
+            { src: "photos_4.jpg", description: "📌 방학 중 진행되는 팀 프로젝트" },
+            { src: "photos_5.jpg", description: "📌 선배와의 만남" },
+            { src: "photos_6.png", description: "📌 미니 세미나" },
+            { src: "photos_7.jpg", description: "📌 MT" },
+            { src: "photos_8.jpg", description: "📌 홈커밍데이" },
+            { src: "photos_9.jpg", description: "📌 OT 및 신입생 환영회" }
         ];
 
         let currentIndex = 0;
